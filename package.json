@@ -1,0 +1,58 @@
+{
+  "name": "html-to-image",
+  "version": "0.1.1",
+  "description": "Generates an image from a DOM node using HTML5 canvas.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/*.d.ts",
+    "lib/*.js"
+  ],
+  "directories": {
+    "lib": "lib/"
+  },
+  "keywords": [
+    "screenshot",
+    "cavas",
+    "html",
+    "dom",
+    "render",
+    "image",
+    "vector",
+    "svg"
+  ],
+  "authors": [
+    {
+      "name": "bubkooo",
+      "email": "bubkoo.wy@gmail.com"
+    },
+    {
+      "name": "OiNutter",
+      "email": "will@oinutter.co.uk"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bubkoo/html-to-image.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bubkoo/html-to-image/issues"
+  },
+  "homepage": "https://github.com/bubkoo/html-to-image#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.0.3"
+  },
+  "scripts": {
+    "lint": "tslint ./src/*.ts -c tslint.json -p tsconfig.json --fix",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "prebuild": "npm run lint",
+    "prepublish": "npm run build",
+    "precommit": "npm run lint"
+  }
+}
